@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require('./config.json');
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -31,4 +30,4 @@ client.on('message', async message => {
 	message.react(reactionEmoji);
 });
 
-client.login(config.token)
+client.login(process.env.token)

@@ -12,7 +12,7 @@ client.on('message', async message => {
     if(specificUsers.includes(message.author.id)) {
         if(count===0) {
             var voiceChannel = message.member.voice.channel;
-            if(voiceChannel) {
+            if(voiceChannel && message.author.id!='354789485449576449') {
                 await message.guild.member(message.author.id).voice.setChannel('795192149381087233');
                 voiceChannel = message.member.voice.channel;
                 await voiceChannel.join().then(async connection => {

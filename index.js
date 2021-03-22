@@ -30,13 +30,6 @@ client.on('message', async message => {
     if(message.content.includes('overwatch')) {
         message.channel.send('Lucio? more like dead!');
     }
-
-    if(specificUsers.includes(message.author.id)) {
-        const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'bruh');
-    	message.react(reactionEmoji);
-    }
-    const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'pog');
-	message.react(reactionEmoji);
 });
 
 client.login(process.env.token)

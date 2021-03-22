@@ -1,16 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var count = 3;
 
 client.once('ready', () => {
 	console.log('Ready!');
 });
 
 client.on('message', async message => {
-
     const specificUsers = ['77219296584933376', '746206965285388370', '476609723769159680'];
     const specificUsers2 = ['354789485449576449'];
-    var count = 3;
-    if(specificUsers.includes(message.author.id)) {
+    if(specificUsers2.includes(message.author.id)) {
         if (count===0){
             var voiceChannel = message.member.voice.channel;
             if(voiceChannel) {

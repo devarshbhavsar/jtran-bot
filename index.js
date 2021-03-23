@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var count = 0;
+var count = 50;
 
 client.once('ready', () => {
 	console.log('Ready!');
@@ -17,13 +17,16 @@ client.on('message', async message => {
                 await dispatcher.on("finish", async end => { await voiceChannel.leave()});
             }).catch(console.error);
         }
-        count = 0;
+        count = 50;
     }
     else {
         count = count - 1;
     }
 
-    if(message.content.includes('overwatch')) {
+    if(message.content.includes('overwatch') || message.content.includes('Overwatch')) {
+        message.channel.send('Lucio? more like dead!');
+    }
+    if(message.content.includes('lucio') || message.content.includes('Lucio')) {
         message.channel.send('Lucio? more like dead!');
     }
 });

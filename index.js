@@ -21,6 +21,7 @@ client.on('message', async message => {
     }
     else {
         count = count - 1;
+        console.log(count);
     }
 
     if(message.content.includes('overwatch') || message.content.includes('Overwatch')) {

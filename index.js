@@ -24,10 +24,10 @@ client.on('message', async message => {
         console.log(count);
     }
 
-    if(message.content.includes('overwatch') || message.content.includes('Overwatch')) {
+    if(message.content.includes('overwatch')) {
         message.channel.send('Lucio? more like dead!');
     }
-    if(message.content.includes('lucio') || message.content.includes('Lucio')) {
+    if(message.content.includes('lucio')) {
         message.channel.send('Lucio? more like dead!');
     }
 });

@@ -27,7 +27,7 @@ client.on('message', async message => {
     if(message.content.includes('overwatch')) {
         message.channel.send('Lucio? more like dead!');
     }
-    if(message.content.includes('lucio')) {
+    else if(message.content.includes('lucio')) {
         message.channel.send('Lucio? more like dead!');
     }
 });

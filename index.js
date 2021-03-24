@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const Chatbot  =  require("discord-chatbot");
+const chatbot  =  new  Chatbot({name: "Jtran", gender: "Male"});
 var count = 50;
 
 client.once('ready', () => {
@@ -22,6 +24,10 @@ client.on('message', async message => {
     else {
         count = count - 1;
         console.log(count);
+    }
+
+    if(message.author.id==='354789485449576449'){
+        chatbot.chat(message).then(console.log).catch(e => console.log(e));
     }
 
     if(message.content.includes('overwatch')) {

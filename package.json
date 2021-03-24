@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "discord-chatbot": "^2.0.1",
     "discord.js": "^12.5.1",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.2.8",

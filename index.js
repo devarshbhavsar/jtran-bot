@@ -27,7 +27,7 @@ client.on('message', async message => {
     }
 
     if(message.author.id==='354789485449576449'){
-        chatbot.chat(message).then(console.log).catch(e => console.log(e));
+        chatbot.chat(message).then(e => console.log(e)).catch(e => console.log(e));
     }
 
     if(message.content.includes('overwatch')) {

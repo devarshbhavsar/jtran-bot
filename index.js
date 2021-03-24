@@ -27,8 +27,9 @@ client.on('message', async message => {
     }
 
     if(message.author.id==='354789485449576449'){
-        message.reply(chatbot.chat(message)).catch(e => console.log(e));
+        chatbot.chat(message).then(console.log).catch(e => console.log(e));
     }
+
     if(message.content.includes('overwatch')) {
         message.channel.send('Lucio? more like dead!');
     }

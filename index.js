@@ -27,7 +27,7 @@ client.on('message', async message => {
     }
 
     if(message.content.startsWith('~') || message.author.id !='822896468024885279'){
-        var text = message.substring(1);
+        var text = message.content.substring(1);
         chatbot.chat(text).then(text => message.channel.send(text)).catch(e => console.log(e));
     }
 

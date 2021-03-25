@@ -26,9 +26,9 @@ client.on('message', async message => {
         console.log(count);
     }
 
-    if(message.author.id==='354789485449576449'){
-
-        chatbot.chat(message).then(text => message.channel.send(text)).catch(e => console.log(e));
+    if(message.content.startsWith('~') || message.author.id !='822896468024885279'){
+        var text = message.substring(1);
+        chatbot.chat(text).then(text => message.channel.send(text)).catch(e => console.log(e));
     }
 
     if(message.content.includes('overwatch')) {
